@@ -1,8 +1,10 @@
-/***********************************************************************
+package com.tickets.service; /***********************************************************************
  * Module:  IUserService.java
  * Author:  yang
  * Purpose: Defines the Interface IUserService
  ***********************************************************************/
+
+import com.tickets.model.UserBean;
 
 import java.util.*;
 
@@ -16,6 +18,6 @@ public interface IUserService {
    UserBean register(UserBean user);
    /** @param user
     * @pdOid 384f395d-c332-4c60-bb4e-b16b42b871b1 */
-   void update(UserBean user);
+   boolean update(UserBean user);
 
 }

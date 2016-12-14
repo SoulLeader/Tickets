@@ -1,8 +1,6 @@
-/***********************************************************************
- * Module:  ITicketService.java
- * Author:  yang
- * Purpose: Defines the Interface ITicketService
- ***********************************************************************/
+package com.tickets.service;
+
+import com.tickets.model.TicketBean;
 
 import java.util.*;
 
@@ -15,13 +13,13 @@ public interface ITicketService {
    List<TicketBean> findTickets(int startCity, int endCity, Date time);
    /** @param ticket
     * @pdOid 882c9e29-711d-48a9-a9f7-9358b9ca13e3 */
-   void orderTicket(TicketBean ticket);
+   boolean orderTicket(TicketBean ticket);
    /** @param ticket
     * @pdOid 51f636d5-47e1-426c-9def-ac9d2bd7c0d6 */
-   void refundTicket(TicketBean ticket);
+   boolean refundTicket(TicketBean ticket);
    /** @param time 
     * @param ticket
     * @pdOid ae156f37-dbe0-433e-83a9-9b8a4873e5bb */
-   void changeTicket(Date time, TicketBean ticket);
+   boolean changeTicket(Date time, TicketBean ticket);
 
 }

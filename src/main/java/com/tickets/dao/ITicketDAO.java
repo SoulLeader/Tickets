@@ -3,8 +3,10 @@
  * Author:  yang
  * Purpose: Defines the Interface ITicketDAO
  ***********************************************************************/
-
+package com.tickets.dao;
 import java.util.*;
+import java.sql.Date;
+import com.tickets.model.*;
 
 /** @pdOid 5f58a453-ac23-4e30-b2e3-3a39d6e0f5a0 */
 public interface ITicketDAO {
@@ -15,13 +17,13 @@ public interface ITicketDAO {
    List<TicketBean> findTickets(int startCity, int endCity, Date time);
    /** @param ticket
     * @pdOid 75188eb3-2c96-4cc1-94fa-ba507080a210 */
-   void orderTicket(TicketBean ticket);
+   boolean orderTicket(TicketBean ticket);
    /** @param ticket
     * @pdOid 80d392b8-bb9c-4550-8a3b-a5357c178927 */
-   void refundTicket(TicketBean ticket);
+   boolean refundTicket(TicketBean ticket);
    /** @param time 
     * @param ticket
     * @pdOid 90154aad-11cd-4739-8d81-f384712ee078 */
-   void changeTicket(Date time, TicketBean ticket);
+   boolean changeTicket(Date time, TicketBean ticket);
 
 }
